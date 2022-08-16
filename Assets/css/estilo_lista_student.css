@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.content-lista{
+    /*margin-top: 510px;*/
+    background-color: honeydew;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 10px;
+    /*margin: auto;*/
+    height: 50px;
+    min-height: 150px;
+    border-radius: 7px;
+}
+.content-student{
+    background-color: honeydew;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    align-items: center;
+}
+.form-list{
+    background-color: #1B7015;
+    color: white;
+    padding: 25px;
+    padding-left: 5px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom: 5px solid #a3914e;
+}
+.content-student .btn-submit{
+   
+    width: 60%;
+	font-family: Roboto;
+    line-height: 18px;
+	font-size: 20px;
+	outline: none;
+	background: #92F54E;
+	border-radius: 3px;
+	color:#373E39;
+	padding: 15px 0;
+	cursor: pointer;
+	transition: all .5s ease;
+    border: 1px solid black;
+}
+.btn-submit:hover{
+    background: #198B09;
+	color:white;
+}
+.content-student table{
+	background-color: honeydew;
+	text-align: center;
+	width: 100%;
+	border-collapse: collapse;;
+}
+.content-student th,td{
+	border:solid 1px #a3914e;
+	padding: 15px;
+}
+.content-student thead{
+	background-color: #1B7015;
+	color:white;
+	border-bottom: 1px solid #a3914e;
+}
+.content-student tr:nth-child(even){
+	background-color: honeydew;
+}
+tr:hover td{
+	background-color: #48FF75;
+	color:#1F4F2B;
+}
