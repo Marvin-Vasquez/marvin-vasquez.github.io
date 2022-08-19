@@ -95,6 +95,7 @@ select:after{
 }
 .form-input-100{
     width: 92%;
+    border: 1px solid black;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 

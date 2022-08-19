@@ -4,10 +4,9 @@
         {
             parent::__construct();
         }
-        public function usuarios()
+        public function Usuarios()
         {
             /* all here*/
-            $data['page_id']=2;
             $data['page_tag']="Usuarios del sistema";
             $data['page_title']="Usuarios";
             $data['page_name']="usuarios";

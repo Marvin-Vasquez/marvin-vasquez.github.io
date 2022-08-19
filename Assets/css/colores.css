@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.app-header{
+    background: #6ABD51;
+}
+.app-header__logo{
+    background: #6ABD51;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 0px;
+}
+
+.app-sidebar__user-avatar{
+    width: 70px;
+    background-color: #1D6F05;
+    padding: 6px;
+}
+.app-sidebar{
+    background-color: #1D6F05;
+}
+.treeview-menu{
+    background-color: #1D6F05;
+    
+}
+.app-menu__item:hover{
+    background-color:#6ABD51 ;
+}
+.treeview-item:hover{
+    background-color: #6ABD51 ;
+}
