@@ -27,6 +27,7 @@
         $format .= print_r('</pre>');
         return $format;
     }
+    // mostrar modal
     function getModal(string $nameModal,$data)
     {
         $view_modal= "Views/Template/Modals/{$nameModal}.php";

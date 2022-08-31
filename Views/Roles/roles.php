@@ -11,14 +11,12 @@
             </h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
-         
-          </ul>
-          <li class="breadcrumb-item"><a href="<?php base_url();?>roles">Roles de usuario</a></li>
+        <li class="breadcrumb-item"><a href="<?php base_url();?>roles">Roles de usuario</a></li> 
+        </ul>
+        
       </div>
       
-
-        <!-- Tabla de datos  -->
-        <div class="row">
+      <div class="row">
         <div class="col-md-12">
           <div class="tile">
             <div class="tile-body">
@@ -29,10 +27,10 @@
                       <th>ID</th>
                       <th>Tipo de rol</th>
                       <th>Descripción</th>
+                      <th>Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
-                    
                   </tbody>
                 </table>
               </div>
@@ -40,8 +38,6 @@
           </div>
         </div>
       </div>
-
-
 
     </main>
 

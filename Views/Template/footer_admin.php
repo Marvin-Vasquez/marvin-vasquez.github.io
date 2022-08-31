@@ -14,11 +14,12 @@
    
     <!-- The javascript plugin to display page loading on top-->
     <script src="<?= media();?>/js/plugins/pace.min.js"></script>
+    <script type="text/javascript" src="<?= media();?>/js/plugins/sweetalert.min.js"></script>
 
     <!-- Data Table-->
     <script type="text/javascript" src="<?= media();?>/js/plugins/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="<?= media();?>/js/plugins/dataTables.bootstrap.min.js"></script>
-    <script type="text/javascript">$('#tableRoles').DataTable();</script>
+    <!-- <script type="text/javascript">$('#tableRoles').DataTable();</script>-->
 
     <script src="<?= media();?>/js/functions_roles.js"></script>
     
