@@ -10,7 +10,7 @@
             $data['page_id']=3;
             $data['page_tag']="Roles de usuario";
             $data['page_title']="Roles de usuarios";
-            $data['page_name']="rol_usurio";
+            $data['page_name']="roles";
               
             $this->views->getView($this,"roles",$data);
         }
@@ -29,8 +29,8 @@
                 }
                 */
                 $arrData[$i]['options']='<div class="text-center">  
-                    <button class="btn btn-primary btn-sm btnEditarRol" rl="'.$arrData[$i]['id'].'" title="Editar" onclick="fntEditRol();"><i class="fas fa-pencil-alt"></i></button>
-                    <button class="btn btn-danger btn-sm btnDelRol" rl="'.$arrData[$i]['id'].'" title="Eliminar"><i class="far fa-trash-alt"></i></button>
+                    <button type="button" class="btn btn-primary btn-sm btnEditarRol" rl="'.$arrData[$i]['id'].'" title="Editar" onclick="fntEditRol();"><i class="fas fa-pencil-alt"></i></button>
+                    <button type="button" class="btn btn-danger btn-sm btnDelRol" rl="'.$arrData[$i]['id'].'" title="Eliminar" onclick="fntDelRol();"><i class="far fa-trash-alt"></i></button>
                 </div>'; 
                 
             }
@@ -38,6 +38,19 @@
             die();
             //dep($arrData);
         }
+        public function getSelectRoles(){
+            $htmlOptions ="";
+            $arrData =$this->model->selectRoles();
+            if(count($arrData)>0){
+                for($i=0; $i<count($arrData);$i++){
+                    $htmlOptions .= '<option value="'.$arrData[$i]['id'].'">'.$arrData[$i]['tipo'].'</option>';
+                }
+            }
+            echo $htmlOptions; 
+            die();
+        }
+
+
         public function getRol(int $idRol)
         {
             $intIdrol = intval(strClean($idRol));
@@ -61,21 +74,51 @@
         public function setRol()
         {
             //dep($_POST);
-            $strDescripcion =$_POST['txtDescripcion'];
+            $option=0;
+            $intIdRol = intval($_POST['idRol']);
+            $strDescripcion = $_POST['txtDescripcion'];
             $Tipo = $_POST['listTipo'];
-            $request_rol = $this->model->insertRol($strDescripcion,$Tipo);
+            
+            if($intIdRol == 0){
+                //crear rol
+                $request_rol = $this->model->insertRol($strDescripcion,$Tipo);
+                $option = 1;
+            }else{
+                //actualizar rol
+                $request_rol = $this->model->updateRol($intIdRol,$strDescripcion,$Tipo);
+                $option = 2;
+            }
 
             if($request_rol > 0)
             {
-                $arrResponse = array('status' => true, 'msg' => 'Datos guardados correctamente.');
-
+                if($option == 1){
+                    $arrResponse = array('status' => true, 'msg' => 'Datos guardados correctamente.');
+                }else if($option == 2){
+                    $arrResponse = array('status' => true, 'msg' => 'Datos Actualizados correctamente.');
+                }
             }else if($request_rol === "exist")
             {
-                $arrResponse = array('status' => false, 'msg' => '¡Atención! El Rol ya existe.');
+                $arrResponse = array('status' => false, 'msg' => '¡Atención! El Rol ya existe!.');
             }else{
                 $arrResponse = array('status' => false, 'msg' => 'Los datos no fueron almacenados.');
             }
             echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
+            die();
+        }
+
+        public function delRol(){
+            if($_POST){
+                $intIdRol = intval($_POST['idRol']);
+                $requestDelete = $this->model->deleteRol($intIdRol);
+                if($requestDelete == 'ok'){
+                    $arrResponse = array('status' => true, 'msg' => 'Se ha eliminado el Rol'); 
+                }else if($requestDelete == 'exist'){
+                    $arrResponse = array('status' => false, 'msg' => 'No es posible elminar un Rol asociado a usuarios!');
+                }else{
+                    $arrResponse = array('status' => false, 'msg' => 'Error al eliminar el rol.');
+                }
+                echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
+            }
             die();
         }
    

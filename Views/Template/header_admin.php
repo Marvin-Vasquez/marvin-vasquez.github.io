@@ -10,6 +10,7 @@
     <title><?= $data['page_tag'];?></title>
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="<?= media();?>/css/main.css">
+    <link rel="stylesheet" type="text/css" href="<?= media();?>/css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="<?= media();?>/css/colores.css">
     <link rel="stylesheet" type="text/css" href="<?= media();?>/css/estilo_form_register.css">
     <!-- Font-icon css-->

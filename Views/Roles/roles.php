@@ -13,7 +13,6 @@
         <ul class="app-breadcrumb breadcrumb">
         <li class="breadcrumb-item"><a href="<?php base_url();?>roles">Roles de usuario</a></li> 
         </ul>
-        
       </div>
       
       <div class="row">
