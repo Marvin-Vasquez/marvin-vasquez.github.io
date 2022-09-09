@@ -13,7 +13,7 @@
         <ul class="app-breadcrumb breadcrumb">
          
           </ul>
-          <li class="breadcrumb-item"><a href="<?php base_url();?>roles">Récord Académico</a></li>
+          <li class="breadcrumb-item"><a href="<?php base_url();?>record">Récord Académico</a></li>
       </div>
       <div class="row">
         <div class="col-md-12">

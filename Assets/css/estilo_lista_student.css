@@ -50,7 +50,7 @@
 	padding: 15px 0;
 	cursor: pointer;
 	transition: all .5s ease;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 .btn-submit:hover{
     background: #198B09;

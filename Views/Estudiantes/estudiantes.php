@@ -1,6 +1,6 @@
 <?php 
     headerAdmin($data); 
-    //getModal('modalRoles',$data);
+    getModal('modalEstudiantes',$data);
 ?>    
 <main class="app-content">
       <div class="app-title">
@@ -11,17 +11,36 @@
             </h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
-         
-          </ul>
           <li class="breadcrumb-item"><a href="estudiantes">Estudiantes</a></li>
+        </ul>
       </div>
       <div class="row">
         <div class="col-md-12">
           <div class="tile">
-            <div class="tile-body">Estudiantes registrados</div>
+            <div class="tile-body">
+              <div class="table-responsive">
+                <table class="table table-hover table-bordered" id="tableEstudiantes">
+                  <thead>
+                    <tr>
+                      <th>Carnet</th>
+                      <th>Nombre</th>
+                      <th>Apellidos</th>
+                      <th>Grado</th>
+                      <th>Sección</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+
+
     </main>
 
 

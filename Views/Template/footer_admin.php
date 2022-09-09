@@ -28,6 +28,12 @@
     <?php if($data['page_name'] == "usuarios"){?>  
         <script src="<?= media();?>/js/functions_usuarios.js"></script> 
     <?php }?>
+    <?php if($data['page_name'] == "estudiantes"){?>  
+        <script src="<?= media();?>/js/functions_estudiantes.js"></script> 
+    <?php }?>
+    <?php if($data['page_name'] == "cursos"){?>  
+        <script src="<?= media();?>/js/functions_cursos.js"></script> 
+    <?php }?>
 
   </body>
 </html>    

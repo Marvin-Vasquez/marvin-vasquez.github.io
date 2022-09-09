@@ -88,14 +88,16 @@ select:after{
 }
 .form-input-48{
     width: 45%;
+    border-bottom: 2px solid #C9FB82;
 }
 .form-input-25{
     width: 45%;
     margin: 5px;
+    border-bottom: 2px solid #C9FB82;
 }
 .form-input-100{
     width: 92%;
-    border: 1px solid black;
+    border-bottom: 2px solid #C9FB82;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 

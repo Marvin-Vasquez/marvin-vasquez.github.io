@@ -1,6 +1,6 @@
 <?php 
     headerAdmin($data); 
-    //getModal('modalRoles',$data);
+    getModal('modalCursos',$data);
 ?>    
 <main class="app-content">
       <div class="app-title">
@@ -11,19 +11,35 @@
             </h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
-         
-          </ul>
           
-          <li class="breadcrumb-item"><a href="cursos"> Cursos</a></li>
+         <li class="breadcrumb-item"><a href="cursos"> Cursos</a></li>
+        </ul>
       </div>
       <div class="row">
         <div class="col-md-12">
           <div class="tile">
-            <div class="tile-body">Create a beautiful dashboard</div>
+            <div class="tile-body">
+              <div class="table-responsive">
+                <table class="table table-hover table-bordered" id="tableCursos">
+                  <thead>
+                    <tr>
+                      <th>Código de curso</th>
+                      <th>Nombre del curso</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </div>      
+
+
+
+
+
     </main>
-
-
-    <?php footerAdmin($data); ?>    
+<?php footerAdmin($data); ?>    

@@ -59,7 +59,7 @@
                 $arrData = $this->model->selectRol($intIdrol);
                 if(empty($arrData))
                 {
-                    $arrResponse = array('status' => false, 'msg' => 'Datos no encontrado.');
+                    $arrResponse = array('status' => false, 'msg' => 'Datos no encontrados.');
 
                 }else{
                     $arrResponse = array('status'=> true, 'data' => $arrData);

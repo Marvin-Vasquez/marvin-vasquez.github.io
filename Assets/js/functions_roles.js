@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded',function(){
         "resonsieve":"true",
         "bDestroy":true,
         "iDisplayLength":10,
-        "order":[[0,"desc"]]
+        "order":[[0,"asc"]]
 
     });
     //AGREGAR_ROL
@@ -87,47 +87,45 @@ window.addEventListener('load',function(){
 function fntEditRol(){
     var btnEditarRol = document.querySelectorAll(".btnEditarRol");
     btnEditarRol.forEach(function(btnEditarRol){
-        btnEditarRol.addEventListener('click',function(){
-            document.querySelector('#titleModal').innerHTML = "Actualizar rol";   
-            document.querySelector('#btnText').innerHTML = "Actualizar";
+    btnEditarRol.addEventListener('click',function(){
+    document.querySelector('#titleModal').innerHTML = "Actualizar rol";   
+    document.querySelector('#btnText').innerHTML = "Actualizar";
 
-            //Extraer atributo rl
-           
-            var idRol = this.getAttribute("rl");
-            //console.log(idRol);
+    //Extraer atributo rl
+    var idRol = this.getAttribute("rl");
+    //console.log(idRol);
 
-            var request = (window.XMLHttpRequest) ? new XMLHttpRequest(): new ActiveXObject('Microsoft.XMLHTTP');
-            var ajaxUrl = base_url+'Roles/getRol/'+idRol;
-            request.open("GET",ajaxUrl,true);
-            request.send();
-            request.onreadystatechange = function(){
-            if(request.readyState == 4 && request.status == 200){
-                var ObjData = JSON.parse(request.responseText);
-                if(ObjData.status){
-                    document.querySelector('#idRol').value=ObjData.data.id;
-                    document.querySelector('#txtDescripcion').value=ObjData.data.descripcion; 
+    var request = (window.XMLHttpRequest) ? new XMLHttpRequest(): new ActiveXObject('Microsoft.XMLHTTP');
+    var ajaxUrl = base_url+'Roles/getRol/'+idRol;
+    request.open("GET",ajaxUrl,true);
+    request.send();
+    request.onreadystatechange = function(){
+    if(request.readyState == 4 && request.status == 200){
+        var ObjData = JSON.parse(request.responseText);
+        if(ObjData.status){
+            document.querySelector('#idRol').value=ObjData.data.id;
+            document.querySelector('#txtDescripcion').value=ObjData.data.descripcion; 
 
-                    if(ObjData.data.tipo == "Administrador"){
-                        var optionSelect ='<option value="1" selected style="display:none;">Administrador</option>';
-                    }else if(ObjData.data.tipo=="Docente"){
-                        var optionSelect ='<option value="2" selected style="display:none;">Docente</option>';
-                    }else if(ObjData.data.tipo=="Auxiliar"){
-                        var optionSelect ='<option value="3" selected style="display:none;">Auxiliar</option>';
-                    }
-                    var htmlSelect = `${optionSelect}
+            if(ObjData.data.tipo == "Administrador"){
+                var optionSelect ='<option value="1" selected style="display:none;">Administrador</option>';
+            }else if(ObjData.data.tipo=="Docente"){
+                var optionSelect ='<option value="2" selected style="display:none;">Docente</option>';
+            }else if(ObjData.data.tipo=="Auxiliar"){
+                var optionSelect ='<option value="3" selected style="display:none;">Auxiliar</option>';
+            }
+            var htmlSelect = `${optionSelect}
                                         <option value="1">Administrador</option>
                                         <option value="2">Docente</option>
                                         <option value="3">Auxiliar</option>
                                       `;
-                    document.querySelector("#listTipo").innerHTML=htmlSelect;
-                    $('#modalFormRol').modal('show');
-                    }else{
-                        Swal.fire('Actualizar', ObjData.msg,'error');
-                    }
-
-                }
-            }
-        });
+            document.querySelector("#listTipo").innerHTML=htmlSelect;
+            $('#modalFormRol').modal('show');
+        }else{
+            Swal.fire('Actualizar', ObjData.msg,'error');
+        }
+    }
+    }
+    });
     });
 }
 
