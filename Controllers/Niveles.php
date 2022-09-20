@@ -17,6 +17,7 @@
             $htmlOptions ="";
             $arrData =$this->model->selectNiveles();
             if(count($arrData)>0){
+                //$htmlOptions .= '<option value="0">Seleccione...</option>';
                 for($i=0; $i<count($arrData);$i++){
                     $htmlOptions .= '<option value="'.$arrData[$i]['id'].'">'.$arrData[$i]['nombreNivel'].'</option>';
                 }

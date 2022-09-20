@@ -33,6 +33,26 @@
         $view_modal= "Views/Template/Modals/{$nameModal}.php";
         require_once $view_modal;
     }
+    function sessionUser(int $idUsuario){
+        require_once ("Models/LoginModel.php");
+        $objLogin = new LoginModel();
+        $request = $objLogin->sessionLogin($idUsuario);
+        return $request;
+    }
+    function sessionStart(){
+        session_start();
+        $inactive = 1800; //tiempo en segundos
+        if(isset($_SESSION['timeout'])){
+            $session_in =time() - $_SESSION['inicio'];
+            if($session_in > $inactive){
+                header("Location: ".BASE_URL."Logout");
+            }
+        }else{
+            header("Location: ".BASE_URL."Logout");
+        }
+
+    }
+
     //Elimina excesos de espacios entre palabras
     function strClean($strCadena){
         $string = preg_replace(['/\s+/','/^\s|\s$/'],[' ',''], $strCadena);
@@ -67,11 +87,30 @@
         return $string;
     }
     //Generar un Token
-    $r1 = bin2hex(random_bytes(10));
-    $r2 = bin2hex(random_bytes(10));
-    $r3 = bin2hex(random_bytes(10));
-    $r4 = bin2hex(random_bytes(10));
-    $token = $r1.'-'.$r2.'-'.$r3.'-'.$r4;
-    return $token;
+    function token(){
+        $r1 = bin2hex(random_bytes(10));
+        $r2 = bin2hex(random_bytes(10));
+        $r3 = bin2hex(random_bytes(10));
+        $r4 = bin2hex(random_bytes(10));
+        $token = $r1.'-'.$r2.'-'.$r3.'-'.$r4;
+        
+        return $token;
+    }
+    //Envio de correo para recuperación de cuenta
+    function sendEmail($data,$template){
+        $asunto = $data['asunto'];
+        $emailDestino = $data['correo'];
+        $empresa = NOMBRE_REMITENTE;
+        $remitente = EMAIL_REMITENTE;
+        //ENVIO DE CORREO
+        $de = "MIME-Version: 1.0\r\n";
+        $de .= "Content-type: text/html; charset=UTF-8\r\n";
+        $de .= "From: {$empresa} <{$remitente}>\r\n";
+        ob_start(); //cargar en memora buffer el siguiente archivo
+        require_once("Views/Template/Email/".$template.".php");
+        $mensaje = ob_get_clean();
+        $send = mail($emailDestino, $asunto, $mensaje, $de);
 
+        return $send;
+    }
 ?>

@@ -40,8 +40,12 @@
             return $return;
         }
         public function selectUsuarios(){
+            $whereAdmin = "";
+            if($_SESSION['idUsuario'] != 1){
+                $whereAdmin = " AND u.id != 1";
+            }
             $sql="SELECT u.id, u.nombre, u.apellido, u.username, u.correo, r.tipo 
-                  FROM usuario u INNER JOIN roles r ON u.tipo_rol = r.id;";
+                  FROM usuario u INNER JOIN roles r ON u.tipo_rol = r.id".$whereAdmin;
             $request = $this->select_all($sql);
 
             return $request;
@@ -88,6 +92,23 @@
             }else{
                 $request = 'error';
             }
+            return $request;
+        }
+
+        public function updatePerfil(int $id, string $Nombre, string $Apellido, string $NombreUsuario, string $Correo, string $Password)
+        {
+            $this->intIdUsuario = $id;
+            $this->strNombre = $Nombre;
+            $this->strApellido = $Apellido;
+            $this->strNombreUsuario = $NombreUsuario;
+            $this->strCorreo = $Correo;
+            $this->strPassword = $Password;
+
+            $sql = "UPDATE usuario SET nombre = ?, apellido = ?, username = ?, correo = ?, password = ?
+                   WHERE id = $this->intIdUsuario";
+            $arrData = array($this->strNombre, $this->strApellido, $this->strNombreUsuario, $this->strCorreo, $this->strPassword); 
+            $request = $this->update($sql,$arrData);
+
             return $request;
         }
     }

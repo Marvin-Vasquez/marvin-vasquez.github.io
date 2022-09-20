@@ -150,24 +150,24 @@ function fntDelCurso(id){
             var ajaxUrl = base_url+'Cursos/delCurso/';
             var strData = "idCurso="+idCurso;
             request.open("POST",ajaxUrl,true);
-                    request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-                    request.send(strData);
-                    request.onreadystatechange = function(){
-                        if(request.readyState == 4 && request.status == 200){
-                            var objData = JSON.parse(request.responseText);
-                            if(objData.status){
-                                Swal.fire('Eliminar Curso',objData.msg,'success');
-                                tableCursos.api().ajax.reload(function(){
-                                    //fntEditRol();
-                                    //fntDelRol();
-                                });
-                            }else{
-                                Swal.fire('Atención!',objData.msg,'error');
-                            }
-                        }
-                    } 
+            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            request.send(strData);
+            request.onreadystatechange = function(){
+            if(request.readyState == 4 && request.status == 200){
+                var objData = JSON.parse(request.responseText);
+                if(objData.status){
+                    Swal.fire('Eliminar Curso',objData.msg,'success');
+                        tableCursos.api().ajax.reload(function(){
+                            //fntEditRol();
+                            //fntDelRol();
+                        });
+                    }else{
+                        Swal.fire('Atención!',objData.msg,'error');
+                    }
                 }
-            });
+            } 
+        }
+    });
             
         
 }

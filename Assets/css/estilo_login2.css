@@ -85,3 +85,34 @@ body{
 	background: #198B09;
 	color:white;
 }
+.contenedor{
+	text-align: center;
+}
+.login-box #divLoading{
+	position: absolute;
+	width: 90%;
+	max-width: 650px;
+	margin: auto;
+	padding: 5px 35px;
+	margin-left: 442px;
+	margin-top: 8px;
+	padding-bottom:30px;
+	height: 60%;
+	background: green;
+	justify-content: center;
+	background: rgba(254,254,255, .65);
+	z-index: 1;
+	display: none;
+	/*
+	width: 90%;
+	max-width: 650px;
+	margin:auto;
+	padding: 5px 35px;
+	margin-top: 90px;
+	padding-bottom: 30px;
+	*/
+}
+.login-box #divLoading img{
+	width: 50px;
+	height: 50px;
+}

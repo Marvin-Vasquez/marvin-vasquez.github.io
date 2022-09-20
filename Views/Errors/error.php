@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - 404</title>
+    <title>Página no encontrada</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -26,8 +26,8 @@
                     <div class="text-center">
                         <div class="error mx-auto" data-text="404">404</div>
                         <p class="lead text-gray-800 mb-5">Page Not Found</p>
-                        <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
-                        <a href="<?php echo base_url(); ?>dashboard">&larr; Back to Dashboard</a>
+                        <p class="text-gray-500 mb-0">Parece que la página solicitada no existe...</p>
+                        <a href="<?php echo base_url(); ?>dashboard">&larr; Regresar al Dashboard</a>
                     </div>
 
                 </div>

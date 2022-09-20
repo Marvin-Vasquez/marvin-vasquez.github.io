@@ -38,7 +38,16 @@
             }
             return $return;
         }
+        public function selectReportsEstudiantes(int $idNivel, int $idSeccion){
+            $this->intNivel = $idNivel;
+            $this->intSeccion = $idSeccion;
+            $sql="SELECT carnet,nombre,apellido FROM estudiante
+                  WHERE idNivel = $this->intNivel AND idSeccion = $this->intSeccion
+                  ORDER BY apellido ASC;";
+            $request = $this->select_all($sql);
 
+            return $request;
+        }
         public function selectEstudiantes(){
             $sql="SELECT e.carnet, e.nombre, e.apellido, e.nombreEncargado, e.correoEncargado, n.nombreNivel, s.nombreSeccion 
                   FROM estudiante e INNER JOIN nivel n ON e.idNivel = n.id INNER JOIN seccion s ON  e.idSeccion = s.id;";

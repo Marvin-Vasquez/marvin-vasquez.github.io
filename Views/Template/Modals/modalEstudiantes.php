@@ -12,11 +12,11 @@
         <form action="#" method="POST" class="form-register" id="formEstudiante" name="formEstudiante">
           <input type="hidden" id="TipoOperacion" name="TipoOperacion" value="">
           <p class="text-primary">Todos los campos son obligatorios.</p>
-          <input type="text" id="txtCarnet" name="txtCarnet" class="form-input-100" placeholder="Número de Carnet">
-          <input type="text" id="txtNombre" name="txtNombre" class="form-input-48" placeholder="Nombre">
-          <input type="text" id="txtApellido" name="txtApellido" class="form-input-48" placeholder="Apellido">
-          <input type="text" id="txtNombreEncargado" name="txtNombreEncargado" class="form-input-100" placeholder="Nombre de encargado" >
-          <input type="email" id="txtCorreoEncargado" name="txtCorreoEncargado" class="form-input-100" placeholder="Correo electrónico de encargado" >
+          <input type="text" id="txtCarnet" name="txtCarnet" class="form-input-100 valid validNumber" placeholder="Número de Carnet" onkeypress="return controlTag(event);">
+          <input type="text" id="txtNombre" name="txtNombre" class="form-input-48 valid validText" placeholder="Nombre">
+          <input type="text" id="txtApellido" name="txtApellido" class="form-input-48 valid validText" placeholder="Apellido">
+          <input type="text" id="txtNombreEncargado" name="txtNombreEncargado" class="form-input-100 valid validText" placeholder="Nombre de encargado" >
+          <input type="email" id="txtCorreoEncargado" name="txtCorreoEncargado" class="form-input-100 valid validEmail" placeholder="Correo electrónico de encargado" >
           <div class="contenedor-inputs">
             <label class="form-label">Nivel Educativo</label>
             <select id="listNiveles" name="listNiveles" class="select-box">

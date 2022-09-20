@@ -2,15 +2,23 @@
 <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
       <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="<?= media();?>/img/logo_itc.jpg" alt="User Image">
-        <div>
-          <p class="app-sidebar__user-name">Marvin Vásquez</p>
-          
+      <div style="height:10px; width:auto"></div> 
+      <div>
+          <p class="app-sidebar__user-name" style="font-style: oblique;font-size: 14px; line-height: 1;">
+            <?= $_SESSION['userData']['nombre'];?>
+        </p>
+        <p class="app-sidebar__user-name" style="font-style: oblique; font-size: 14px; line-height: 2;">
+            <?= $_SESSION['userData']['apellido'];?>
+        </p>
+        <p class="app-sidebar__user-designation" style="font-style: oblique; font-size: 14px;">
+            <?= $_SESSION['userData']['tipo'];?>
+        </p>  
         </div>
       </div>
       <ul class="app-menu">
+        <?php if($_SESSION['userData']['tipo_rol']==1){?>
         <li>
-            <a class="app-menu__item" href="<?= base_url();?>dashboard">
-                
+            <a class="app-menu__item" href="<?= base_url();?>dashboard"> 
                 <i class="app-menu__icon fa fa-home" aria-hidden="true"></i>
                 <span class="app-menu__label">Inicio</span>
             </a>
@@ -50,13 +58,32 @@
                 <li><a class="treeview-item" href="<?= base_url();?>info-cursos"><i class="icon fa fa-circle-o"></i> Información</a></li>
             </ul>
         </li>
-        
+        <?php } ?>
+        <?php if($_SESSION['userData']['tipo_rol']==2){?>
+        <li class="treeview">
+            <a class="app-menu__item" href="#" data-toggle="treeview">
+                
+                <i class="fa-solid fa-file-pen"></i>
+                <span class="app-menu__label">&nbsp; Reportes</span>
+                <i class="treeview-indicator fa fa-angle-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li><a class="treeview-item" href="<?= base_url();?>reportes"><i class="icon fa fa-circle-o"></i> Ingresar reportes</a></li>
+            </ul>
+        </li>
+        <?php } ?>
+        <?php if($_SESSION['userData']['tipo_rol']==3){?>
         <li>
             <a class="app-menu__item" href="<?= base_url();?>record">
                 <i class="app-menu__icon fa fa-history" aria-hidden="true"></i>
                 <span class="app-menu__label">Record académico</span>
             </a>
+            <a class="app-menu__item" href="<?= base_url();?>record/reportes_diarios">
+                <i class="fa-sharp fa-solid fa-bell" aria-hidden="true"></i>
+                <span class="app-menu__label">&nbsp; Estudiantes Reportados</span>
+            </a>
         </li>
+        <?php } ?>
         <li>
             <a class="app-menu__item" href="<?= base_url();?>logout">
                
@@ -67,33 +94,3 @@
 
       </ul>
     </aside>
-
-
-
-
-
-
-
-<!-- 
-<div class="container-fluid">
-        <div class="row">
-            <div class="barra-lateral col-12 col-sm-auto">
-                <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
-
-                    <a href="#"><i class="fas fa-home"></i><span>Inicio</span></a>
-                    <a href="<?php echo base_url(); ?>usuarios"><i class="fa-solid fa-user-plus"></i><span>Registro de usuarios</span></a>
-                    <a href="<?= base_url() ?>alumnos"><i class="fa-solid fa-user-graduate"></i><span>Registro de alumnos</span></a>
-                    <a href="<?= base_url() ?>cursos"><i class="fa-solid fa-chalkboard"></i><span>Registro de cursos</span></a>
-                    <a href="<?= base_url() ?>records"><i class="fa-solid fa-book-open"></i></i><span>Record académico</span></a>                         
-                    <a href="<?= base_url() ?>reportes"><i class="fa-solid fa-file-lines"></i></i></i>Ingreso de reportes</span></a>
-                </nav>
-                <br>
-                <div class="image">  
-                    <img src="<?php echo base_url(); ?>Assets/img/logo_itc.jpg" alt="logo" style="width:160px; height:160px; display:block; margin:0px auto; border-radius:48%">
-                </div> 
-                
-            </div>
-        </div>
-    </div>
-
--->

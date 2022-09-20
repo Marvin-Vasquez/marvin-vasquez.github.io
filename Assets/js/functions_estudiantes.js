@@ -20,6 +20,30 @@ document.addEventListener('DOMContentLoaded',function(){
             {"data":"options"}
 
         ],
+        'dom': 'lBfrtip',
+        'buttons': [
+            {
+                "extend": "copyHtml5",
+                "text": "<i class='far fa-copy'></i> Copiar",
+                "titleAttr":"Copiar",
+                "className": "btn-copy"
+            },{
+                "extend": "excelHtml5",
+                "text": "<i class='fas fa-file-excel'></i> Excel",
+                "titleAttr":"Esportar a Excel",
+                "className": "btn-excel"
+            },{
+                "extend": "pdfHtml5",
+                "text": "<i class='fas fa-file-pdf'></i> PDF",
+                "titleAttr":"Esportar a PDF",
+                "className": "btn-pdf"
+            },{
+                "extend": "csvHtml5",
+                "text": "<i class='fas fa-file-csv'></i> CSV",
+                "titleAttr":"Esportar a CSV",
+                "className": "btn-csv"
+            }
+        ],
         "resonsieve":"true",
         "bDestroy":true,
         "iDisplayLength":10,
@@ -61,7 +85,7 @@ document.addEventListener('DOMContentLoaded',function(){
                     Swal.fire('Estudiantes',objData.msg,'success');
                     tableEstudiantes.api().ajax.reload(function(){
                         fntNivel();
-    fntSeccion();
+                        fntSeccion();
                     });
                 }else{
                     Swal.fire('Estudiantes', objData.msg,'error');

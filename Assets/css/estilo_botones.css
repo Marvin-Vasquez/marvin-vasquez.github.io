@@ -1,0 +1,20 @@
+.dt-buttons .btn-copy{
+    color: #FFF; 
+    background-color: #6f7275;
+    border-color: #6f7275;
+}
+.dt-buttons .btn-excel{
+     color: #FFF; 
+    background-color: #33713e;
+    border-color: #33713e;
+}
+.dt-buttons .btn-pdf{
+    color: #FFF;
+    background-color: #be4545;
+    border-color: #be4545;
+}
+.dt-buttons .btn-csv{
+    color: #FFF;
+    background-color: #5b9cd6;
+    border-color: #5b9cd6;
+}

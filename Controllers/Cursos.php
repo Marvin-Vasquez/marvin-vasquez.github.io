@@ -2,7 +2,14 @@
     class Cursos extends Controllers{
         public function __construct()
         {
+            sessionStart();
             parent::__construct();
+            //session_start();
+			if(empty($_SESSION['login']))
+			{
+				header('Location: '.base_url().'login');
+			}
+			//getPermisos(2);
         }
         public function Cursos()
         {
@@ -10,7 +17,7 @@
             $data['page_tag']="Cursos ciclo básico";
             $data['page_title']="Cursos de nivel básico";
             $data['page_name']="cursos";
-              
+            $data['page_functions_js']="functions_cursos.js";
             $this->views->getView($this,"cursos",$data);
         }
 
@@ -47,6 +54,18 @@
              
              die();
          }
+
+        public function getSelectCursos(){
+            $htmlOptions ="";
+            $arrData =$this->model->selectCursos();
+            if(count($arrData)>0){
+                for($i=0; $i<count($arrData);$i++){
+                    $htmlOptions .= '<option value="'.$arrData[$i]['id'].'">'.$arrData[$i]['nombreCurso'].'</option>';
+                }
+            }
+            echo $htmlOptions; 
+            die();
+        }
 
          public function getCursos()
          {
