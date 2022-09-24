@@ -39,7 +39,7 @@
         $request = $objLogin->sessionLogin($idUsuario);
         return $request;
     }
-    function sessionStart(){
+    /*function sessionStart(){
         session_start();
         $inactive = 1800; //tiempo en segundos
         if(isset($_SESSION['timeout'])){
@@ -51,7 +51,7 @@
             header("Location: ".BASE_URL."Logout");
         }
 
-    }
+    }*/
 
     //Elimina excesos de espacios entre palabras
     function strClean($strCadena){

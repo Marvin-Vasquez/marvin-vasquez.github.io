@@ -23,11 +23,11 @@ if(document.querySelector('#formReporte')){
             }
         });
         let intIdSeccion = document.querySelector('#seccion').value;
-        let intIdCurso = parseInt(document.querySelector('#txtCurso').value);
+        let intIdCurso = document.querySelector('#txtCurso').value;
         let strMotivo = document.querySelector('#txtMotivo').value;
         let strPlan = document.querySelector("#txtPlan").value;
-
-        if(intIdGrado == 0 ||  intIdCurso == 0 || strMotivo == "")
+        alert("Curso: "+intIdCurso);
+        if(intIdGrado == 0 ||  intIdCurso == "" || strMotivo == "")
         { 
             Swal.fire('Atención','Todos los datos son obligatorios a excepción del plan de mejora', 'error');
             return;
@@ -61,8 +61,14 @@ if(document.querySelector('#formReporte')){
         }else{    
             Swal.fire('Reporte Académico','Reporte generado exitosamente.','success');
         }
-
+            formReporte.reset();
+            $('#listEstudiantes').empty();
             $('#listEstudiantesReportados').empty();
+            $('#txtMotivo').val('');
+            $('#txtPlan').val('');
+            document.querySelector('#txtSección').value = 0;
+            document.querySelector('#txtGrado').value = 0;
+            document.querySelector('#txtCurso').value = 0;
         }
 
 
@@ -78,13 +84,13 @@ if(document.querySelector('#formReporte')){
 $(function(){
     $('#txtGrado').change(function(){
         if($('#txtGrado').val() == "1"){
+            //alert("1ro basico elegido");
             $('#txtSección').prop('disabled',false);
-            document.querySelector('#txtSección').value="0";
-            document.querySelector('#seccion').value = 0;
+            document.querySelector('#txtSección').value = 0;
         }else{
             $('#txtSección').prop('disabled','disabled');
             idSeccion=1;
-            document.querySelector('#seccion').value =idSeccion;
+            document.querySelector('#txtSección').value =idSeccion;
             fntMostrarEstudiantes();
         }
     });

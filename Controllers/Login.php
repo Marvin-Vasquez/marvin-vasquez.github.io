@@ -4,6 +4,7 @@
         {
             //sessionStart();
             session_start();
+            
             if(isset($_SESSION['login']))
 			{
 				header('Location: '.base_url().'dashboard');
@@ -38,7 +39,7 @@
                     }else{
                         $arrData = $requestUser;
                         $_SESSION['idUsuario'] = $arrData['id'];
-                        $_SESSION['Username'] = $arrData['username'];
+                        $_SESSION['tipo_usuario'] = $arrData['tipo_rol'];
                         $_SESSION['login']=true;
                         $_SESSION['timeout']=true;
                         $_SESSION['inicio']=time();

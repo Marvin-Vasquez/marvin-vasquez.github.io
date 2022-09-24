@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded',function(){
             "url":"//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json"
         },
         "ajax":{
-            "url": " "+base_url+"/Record/getRecords",
+            "url": " "+base_url+"Record/getRecords",
             
             "dataSrc":""
         },

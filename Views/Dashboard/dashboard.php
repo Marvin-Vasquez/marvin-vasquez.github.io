@@ -6,7 +6,6 @@
       <div class="app-title">
         <div>
           <h1><i class="fa fa-dashboard"></i> <?= $data['page_title'];?></h1>
-         <!-- <p>Start a beautiful journey here</p> -->
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
@@ -77,19 +76,19 @@
             </h1>
         </div>
       </div>
-        <div class="row">
+      <div class="row">
+      
         <div class="col-md-12">
           <div class="tile">
             <div class="tile-body">
               <div class="table-responsive">
-                <table class="table table-hover table-bordered" id="tableRecord">
+                <table class="table table-hover table-bordered" id="tableEstudianteRiesgo">
                   <thead>
                     <tr>
                       <th>Carnet</th>
                       <th>Apellido</th>
                       <th>Nombre</th>
                       <th>Grado</th>
-                      <th>Curso con más reportes</th>
                       <th>Opciones</th>
                     </tr>
                   </thead>
@@ -99,12 +98,12 @@
               </div>
             </div>
           </div>
-        </div>
-      </div> 
-      </div>
+          </div>
+        </div> 
+    </div>
       
       <?php } ?>
-    </main>
+</main>
 
 
     <?php footerAdmin($data); ?>       

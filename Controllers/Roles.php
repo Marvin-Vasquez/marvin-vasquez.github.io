@@ -2,7 +2,8 @@
     class Roles extends Controllers{
         public function __construct()
         {
-            sessionStart();
+            session_start();
+           // sessionStart();
             parent::__construct();
             //session_start();
 			if(empty($_SESSION['login']))

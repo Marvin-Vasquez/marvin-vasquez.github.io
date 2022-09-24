@@ -1,4 +1,30 @@
+var tableEstudianteRiesgo;
+document.addEventListener('DOMContentLoaded',function(){
+    tableEstudianteRiesgo = $('#tableEstudianteRiesgo').dataTable({
+        "aProcessing":true,
+        "aServerSide":true,
+        "language":{
+            "url":"//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json"
+        },
+        "ajax":{
+            "url": " "+base_url+"Dashboard/getEstudianteRiesgo",
+            
+            "dataSrc":""
+        },
+        "columns":[
+            {"data":"carnet"},
+            {"data":"apellido"},
+            {"data":"nombre"},
+            {"data":"grado"},
+            {"data":"options"}
+        ],
+        "resonsieve":"true",
+        "bDestroy":true,
+        "iDisplayLength":20,
+        "order":[[0,"desc"]]
 
+    });
+});
 function fntTotalEstudiantes(){
     var ajaxUrl  = base_url+'Dashboard/totalEstudiantes';
     var request = (window.XMLHttpRequest) ? new XMLHttpRequest(): new ActiveXObject('Microsoft.XMLHTTP');
@@ -92,6 +118,6 @@ window.addEventListener('load',function(){
     fntReportesDiarios();
     fntCursoMas();
     fntCursoMenos();
-    //$('#tableRecord').dataTable();
-    //tableRecord.api().ajax.reload();
+    //$('#tableEstudianteRiesgo').dataTable();
+    //tableEstudianteRiesgo.api().ajax.reload();
 },false);

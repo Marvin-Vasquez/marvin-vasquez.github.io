@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-09-2022 a las 05:32:26
+-- Tiempo de generación: 24-09-2022 a las 06:02:08
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -195,7 +195,71 @@ INSERT INTO `record` (`id`, `idUnidad`, `carnetEstudiante`, `idGrado`, `idCurso`
 (4, 4, 2020102, 1, 102, 'No realizo examen corto.', '', '2022-09-19'),
 (5, 4, 2018109, 3, 109, 'No presento instrumento en clase', '', '2022-09-19'),
 (6, 4, 2020116, 3, 109, 'No presento instrumento en clase', '', '2022-09-19'),
-(7, 4, 2019013, 1, 113, 'No entrego laboratorio 5', 'tiene hasta el 23 de septiembre para entregarlo', '2022-09-19');
+(7, 4, 2019013, 1, 113, 'No entrego laboratorio 5', 'tiene hasta el 23 de septiembre para entregarlo', '2022-09-19'),
+(8, 4, 2019013, 1, 104, 'No entrego tarea 5', 'debe entregar antes del 26 de septiembre sobre el 75% de la nota', '2022-09-19'),
+(9, 4, 2018192, 3, 114, 'No completo el examen testing 2 de Power Point', 'Debe entregar completo por correo electrónico a mas tardar el 25 de septiembre', '2022-09-19'),
+(10, 4, 2018109, 3, 114, 'No completo el examen testing 2 de Power Point', 'Debe entregar completo por correo electrónico a mas tardar el 25 de septiembre', '2022-09-19'),
+(11, 4, 2018109, 3, 121, 'No entrego laboratorio 3', 'Debe reponer la clase el lunes 25 de septiembre', '2022-09-19'),
+(12, 4, 2021001, 3, 101, 'No entregaron actividad de la página 85 del libro.', 'Debe completar la actividad para el 26 de septiembre sobre el 75% de la nota', '2022-09-19'),
+(13, 4, 2022205, 3, 101, 'No entregaron actividad de la página 85 del libro.', 'Debe completar la actividad para el 26 de septiembre sobre el 75% de la nota', '2022-09-19'),
+(14, 4, 2020133, 3, 101, 'No entrego tarea 6', 'Puede entregar hasta el 23 de septiembre', '2022-09-21'),
+(15, 4, 2022195, 3, 101, 'No entrego tarea 6', 'Puede entregar hasta el 23 de septiembre', '2022-09-21'),
+(16, 4, 2022136, 3, 101, 'No entrego tarea 6', 'Puede entregar hasta el 23 de septiembre', '2022-09-21'),
+(17, 4, 2019014, 3, 101, 'No entrego tarea 6', 'Puede entregar hasta el 23 de septiembre', '2022-09-21'),
+(18, 4, 2016191, 3, 101, 'No entrego tarea 6', 'Puede entregar hasta el 23 de septiembre', '2022-09-21'),
+(19, 4, 2018200, 1, 113, 'No entregaron tarea 7 de listado de cuentas', 'Puede entregar hasta el 23 de septiembre sobre el 70% de la nota', '2022-09-21'),
+(20, 4, 2022063, 1, 113, 'No entregaron tarea 7 de listado de cuentas', 'Puede entregar hasta el 23 de septiembre sobre el 70% de la nota', '2022-09-21'),
+(21, 4, 2022166, 1, 113, 'No entregaron tarea 7 de listado de cuentas', 'Puede entregar hasta el 23 de septiembre sobre el 70% de la nota', '2022-09-21'),
+(22, 4, 2022075, 1, 114, 'No entregaron captura de pantalla del Testing 2 de Gmetrix', 'Debe entregarlo a mas tardar el 23 de septiembre en aula virtual.', '2022-09-21'),
+(23, 4, 2022068, 1, 114, 'No entregaron captura de pantalla del Testing 2 de Gmetrix', 'Debe entregarlo a mas tardar el 23 de septiembre en aula virtual.', '2022-09-21'),
+(24, 4, 2022075, 1, 101, 'No presento libro para la actividad en clase', '', '2022-09-21'),
+(25, 4, 2018200, 1, 108, 'No entro a clase, no se tuvo ninguna autorización para la ausencia.', '', '2022-09-21'),
+(26, 4, 2021008, 1, 104, 'No entregaron tarea 6 sobre la investigación del proceso celular', 'Debe entregar por correo electrónico a mas tardar el 24 de septiembre', '2022-09-21'),
+(27, 4, 2022166, 1, 104, 'No entregaron tarea 6 sobre la investigación del proceso celular', 'Debe entregar por correo electrónico a mas tardar el 24 de septiembre', '2022-09-21'),
+(28, 4, 2018200, 1, 104, 'No entregaron tarea 6 sobre la investigación del proceso celular', 'Debe entregar por correo electrónico a mas tardar el 24 de septiembre', '2022-09-21'),
+(29, 4, 2022075, 1, 102, 'No completaron el examen corto 4', '', '2022-09-21'),
+(30, 4, 2022142, 1, 102, 'No completaron el examen corto 4', '', '2022-09-21'),
+(31, 4, 2022112, 1, 102, 'No completaron el examen corto 4', '', '2022-09-21'),
+(32, 4, 2022033, 1, 102, 'No completaron el examen corto 4', '', '2022-09-21'),
+(33, 4, 2022075, 1, 111, 'No entrego laboratorio 5', 'Puede entregar hasta el 23 de septiembre', '2022-09-21'),
+(34, 4, 2022142, 1, 111, 'No entrego laboratorio 5', 'Puede entregar hasta el 23 de septiembre', '2022-09-21'),
+(35, 4, 2022033, 1, 111, 'No entrego laboratorio 5', 'Puede entregar hasta el 23 de septiembre', '2022-09-21'),
+(36, 4, 2022112, 1, 111, 'No entrego laboratorio 5', 'Puede entregar hasta el 23 de septiembre', '2022-09-21'),
+(37, 4, 2022142, 1, 111, 'No entrego laboratorio 5', 'Puede entregar hasta el 23 de septiembre', '2022-09-21'),
+(39, 4, 2022142, 1, 121, 'No ingreso a la clase', '', '2022-09-21'),
+(40, 4, 2022112, 1, 121, 'No ingreso a la clase', '', '2022-09-21'),
+(41, 4, 2022075, 1, 121, 'No ingreso a la clase', '', '2022-09-21'),
+(43, 4, 2022033, 1, 121, 'No ingreso a la clase', '', '2022-09-21'),
+(44, 4, 2022142, 1, 121, 'No ingreso a la clase', '', '2022-09-21'),
+(45, 4, 2022177, 1, 121, 'No ingreso a la clase', '', '2022-09-21'),
+(46, 4, 2022075, 1, 121, 'Se anulo el examen corto por estar copiando con otro compañero', '', '2022-09-21'),
+(47, 4, 2022142, 1, 121, 'Se anulo el examen corto por estar copiando con otro compañero', '', '2022-09-21'),
+(48, 4, 2022112, 1, 121, 'Se anulo el examen corto por estar copiando con otro compañero', '', '2022-09-21'),
+(49, 4, 2022142, 1, 121, 'Se anulo el examen corto por estar copiando con otro compañero', '', '2022-09-21'),
+(51, 4, 2022033, 1, 121, 'Se anulo el examen corto por estar copiando con otro compañero', '', '2022-09-21'),
+(52, 4, 2022177, 1, 121, 'Se anulo el examen corto por estar copiando con otro compañero', '', '2022-09-21'),
+(53, 4, 2022078, 1, 121, 'Se anulo el examen corto por estar copiando con otro compañero', '', '2022-09-21'),
+(54, 4, 2021024, 1, 121, 'Se anulo el examen corto por estar copiando con otro compañero', '', '2022-09-21'),
+(55, 4, 2022075, 1, 111, 'No entrego laboratorio 6', 'Debe entregar a mas tardar 23 de septiembre por correo electrónico', '2022-09-21'),
+(56, 4, 2022142, 1, 111, 'No entrego laboratorio 6', 'Debe entregar a mas tardar 23 de septiembre por correo electrónico', '2022-09-21'),
+(57, 4, 2022112, 1, 111, 'No entrego laboratorio 6', 'Debe entregar a mas tardar 23 de septiembre por correo electrónico', '2022-09-21'),
+(59, 4, 2022033, 1, 111, 'No entrego laboratorio 6', 'Debe entregar a mas tardar 23 de septiembre por correo electrónico', '2022-09-21'),
+(60, 4, 2022142, 1, 111, 'No entrego laboratorio 6', 'Debe entregar a mas tardar 23 de septiembre por correo electrónico', '2022-09-21'),
+(61, 4, 2022177, 1, 111, 'No entrego laboratorio 6', 'Debe entregar a mas tardar 23 de septiembre por correo electrónico', '2022-09-21'),
+(62, 4, 2022078, 1, 111, 'No entrego laboratorio 6', 'Debe entregar a mas tardar 23 de septiembre por correo electrónico', '2022-09-21'),
+(63, 4, 2021024, 1, 111, 'No entrego laboratorio 6', 'Debe entregar a mas tardar 23 de septiembre por correo electrónico', '2022-09-21'),
+(65, 4, 2022075, 1, 114, 'reporte 1', 'puede mejorar', '2022-09-23'),
+(66, 4, 2022078, 1, 114, 'reporte 1', 'puede mejorar', '2022-09-23'),
+(67, 4, 2022155, 1, 114, 'No completaron laboratorio 6', '', '2022-09-23'),
+(68, 4, 2018200, 1, 114, 'No completaron laboratorio 6', '', '2022-09-23'),
+(69, 4, 2022155, 1, 114, 'No completaron laboratorio 6', '', '2022-09-23'),
+(70, 4, 2018200, 1, 114, 'No completaron laboratorio 6', '', '2022-09-23'),
+(71, 4, 2022132, 1, 114, 'Estaba jugando en clase, fue retirado del salón.', '', '2022-09-23'),
+(72, 4, 2022033, 1, 109, 'No presentaron instrumento melodica.', '', '2022-09-23'),
+(73, 4, 2022132, 1, 109, 'No presentaron instrumento melodica.', '', '2022-09-23'),
+(74, 4, 2022075, 1, 109, 'No presentaron instrumento melodica.', '', '2022-09-23'),
+(75, 4, 2022154, 1, 121, 'no entro a clase', '', '2022-09-23'),
+(76, 4, 2019014, 3, 122, 'No entrego reporte 4', '', '2022-09-23');
 
 -- --------------------------------------------------------
 
@@ -218,9 +282,8 @@ CREATE TABLE `reportediario` (
 --
 
 INSERT INTO `reportediario` (`correlativo`, `idGrado`, `idCurso`, `carnet`, `motivoReporte`, `planMejora`, `fechaReporte`) VALUES
-(1, 3, 109, 2018109, 'No presento instrumento en clase', '', '2022-09-19'),
-(2, 3, 109, 2020116, 'No presento instrumento en clase', '', '2022-09-19'),
-(3, 1, 113, 2019013, 'No entrego laboratorio 5', 'tiene hasta el 23 de septiembre para entregarlo', '2022-09-19');
+(1, 1, 121, 2022154, 'no entro a clase', '', '2022-09-23'),
+(2, 3, 122, 2019014, 'No entrego reporte 4', '', '2022-09-23');
 
 --
 -- Disparadores `reportediario`
@@ -410,13 +473,13 @@ ALTER TABLE `nivel`
 -- AUTO_INCREMENT de la tabla `record`
 --
 ALTER TABLE `record`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT de la tabla `reportediario`
 --
 ALTER TABLE `reportediario`
-  MODIFY `correlativo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `correlativo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -468,7 +531,7 @@ DELIMITER $$
 --
 -- Eventos
 --
-CREATE DEFINER=`root`@`localhost` EVENT `limpiarReportesDiarios` ON SCHEDULE EVERY 1 DAY STARTS '2022-09-19 18:30:00' ENDS '2022-10-31 18:21:00' ON COMPLETION PRESERVE ENABLE COMMENT 'Limpiar tabla de reporte diario' DO TRUNCATE TABLE reportediario$$
+CREATE DEFINER=`root`@`localhost` EVENT `limpiarReportesDiarios` ON SCHEDULE EVERY '0 1' DAY_HOUR STARTS '2022-09-19 21:50:00' ENDS '2022-10-31 18:21:00' ON COMPLETION PRESERVE ENABLE COMMENT 'Limpiar tabla de reporte diario' DO TRUNCATE reportediario$$
 
 DELIMITER ;
 COMMIT;

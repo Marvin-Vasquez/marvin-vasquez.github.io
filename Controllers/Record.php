@@ -2,7 +2,8 @@
     class Record extends Controllers{
       public function __construct()
       {
-        sessionStart();
+        session_start();
+        //sessionStart();
         parent::__construct();
         //session_start();
 			  if(empty($_SESSION['login']))
@@ -43,7 +44,8 @@
         $data['page_name']="reportes_diarios";
         $data['page_functions_js']="functions_reportes_diarios.js";
         $this->views->getView($this,"reportes_diarios",$data);
-    }
+      }
+     
    
     }
 

@@ -19,7 +19,7 @@
             $this->strUsuario = $usuario;
             $this->strPassword = $password;
 
-            $sql = "SELECT id, nombre, apellido, username from usuario 
+            $sql = "SELECT id, nombre, apellido, username, tipo_rol from usuario 
                     WHERE username ='$this->strUsuario' AND password ='$this->strPassword'";
             
 

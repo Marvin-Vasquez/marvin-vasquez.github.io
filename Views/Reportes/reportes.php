@@ -18,7 +18,7 @@
                 <div class="form-group">
                   <label class="control-label">Grado</label>
                   <select class="form-control" id="txtGrado" name="txtGrado" onchange="grado(this)">
-                
+                  <option value="0"></option>
                   </select>
                   <div class="form-group">
                   <label class="control-label">Sección</label>
