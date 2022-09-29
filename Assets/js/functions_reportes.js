@@ -26,7 +26,7 @@ if(document.querySelector('#formReporte')){
         let intIdCurso = document.querySelector('#txtCurso').value;
         let strMotivo = document.querySelector('#txtMotivo').value;
         let strPlan = document.querySelector("#txtPlan").value;
-        alert("Curso: "+intIdCurso);
+        //alert("Curso: "+intIdCurso);
         if(intIdGrado == 0 ||  intIdCurso == "" || strMotivo == "")
         { 
             Swal.fire('Atención','Todos los datos son obligatorios a excepción del plan de mejora', 'error');

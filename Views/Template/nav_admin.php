@@ -83,12 +83,13 @@
                 <span class="app-menu__label">&nbsp; Estudiantes Reportados</span>
             </a>
         </li>
+        <!--
         <li>
         <a class="app-menu__item" href="<?= base_url();?>notificar">
                 <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
                 <span class="app-menu__label">&nbsp; Notificar a padres de familia</span>
             </a>
-        </li>
+        </li> -->
         <?php } ?>
         <li>
             <a class="app-menu__item" href="<?= base_url();?>logout">

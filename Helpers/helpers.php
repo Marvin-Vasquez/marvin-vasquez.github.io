@@ -19,6 +19,13 @@
         require_once ($view_footer);
     }
  
+    function getFileReporte(string $url, $data){
+        ob_start();
+        require_once("Views/{$url}.php");
+        $file = ob_get_clean();
+
+        return $file;
+    }
 
     //Muestra informacion formateada
     function dep($data){
@@ -39,7 +46,7 @@
         $request = $objLogin->sessionLogin($idUsuario);
         return $request;
     }
-    /*function sessionStart(){
+    function sessionStart(){
         session_start();
         $inactive = 1800; //tiempo en segundos
         if(isset($_SESSION['timeout'])){
@@ -51,7 +58,7 @@
             header("Location: ".BASE_URL."Logout");
         }
 
-    }*/
+    }
 
     //Elimina excesos de espacios entre palabras
     function strClean($strCadena){

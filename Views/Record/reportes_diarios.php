@@ -1,6 +1,6 @@
 <?php 
     headerAdmin($data); 
-    //getModal('modalCursos',$data);
+    getModal('modalReportesDiarios',$data);
 ?>  
 
 <main class="app-content">
@@ -24,15 +24,13 @@
                 <table class="table table-hover table-bordered" id="tableReportes">
                   <thead>
                     <tr>
-                      <th>Correlativo</th>
                       <th>Carnet</th>
                       <th>Apellido</th>
                       <th>Nombre</th>
+                      <th>Correo</th>
                       <th>Grado</th>
-                      <th>Curso</th>
-                      <th>Motivo del reporte</th>
-                      <th>Plan de mejora</th>
                       <th>Fecha del reporte</th>
+                      <th>Opciones</th>
                     </tr>
                   </thead>
                   <tbody>

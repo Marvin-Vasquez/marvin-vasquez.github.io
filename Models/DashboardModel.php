@@ -40,7 +40,7 @@
         }
         public function selectCursoMenosReporte(){
             $sql="SELECT c.nombreCurso as curso, COUNT(r.idCurso) FROM record r INNER JOIN curso c ON r.idCurso = c.id 
-            GROUP BY c.nombreCurso ORDER BY r.idCurso DESC limit 1";
+            GROUP BY c.nombreCurso ORDER BY COUNT(r.idCurso) ASC limit 1";
             
             $request = $this->select_all($sql);
 
@@ -48,7 +48,7 @@
         }
         public function selectCursoMasReporte(){
             $sql="SELECT c.nombreCurso as curso, COUNT(r.idCurso) FROM record r INNER JOIN curso c ON r.idCurso = c.id 
-            GROUP BY c.nombreCurso ORDER BY r.idCurso ASC limit 1";
+            GROUP BY c.nombreCurso ORDER BY COUNT(r.idCurso) DESC limit 1";
             
             $request = $this->select_all($sql);
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-09-2022 a las 06:02:08
+-- Tiempo de generación: 29-09-2022 a las 13:02:54
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -259,7 +259,12 @@ INSERT INTO `record` (`id`, `idUnidad`, `carnetEstudiante`, `idGrado`, `idCurso`
 (73, 4, 2022132, 1, 109, 'No presentaron instrumento melodica.', '', '2022-09-23'),
 (74, 4, 2022075, 1, 109, 'No presentaron instrumento melodica.', '', '2022-09-23'),
 (75, 4, 2022154, 1, 121, 'no entro a clase', '', '2022-09-23'),
-(76, 4, 2019014, 3, 122, 'No entrego reporte 4', '', '2022-09-23');
+(76, 4, 2019014, 3, 122, 'No entrego reporte 4', '', '2022-09-23'),
+(77, 4, 2019141, 3, 102, 'Entregaron tarea copiada', '', '2022-09-23'),
+(78, 4, 2019165, 3, 102, 'Entregaron tarea copiada', '', '2022-09-23'),
+(79, 4, 2019014, 3, 113, 'No entrego tarea 8', '', '2022-09-23'),
+(80, 4, 2022154, 1, 103, 'estuvo molestando a sus compañeros en clase y no trabajo.', '', '2022-09-23'),
+(81, 4, 2022154, 1, 114, 'No ha entregado los dos exámenes testing de Gmetrix, perdió 15 pts de zona.', 'Puede entregar las capturas de pantalla de los resultados a mas tardar el 29 de septiembre.', '2022-09-24');
 
 -- --------------------------------------------------------
 
@@ -283,7 +288,11 @@ CREATE TABLE `reportediario` (
 
 INSERT INTO `reportediario` (`correlativo`, `idGrado`, `idCurso`, `carnet`, `motivoReporte`, `planMejora`, `fechaReporte`) VALUES
 (1, 1, 121, 2022154, 'no entro a clase', '', '2022-09-23'),
-(2, 3, 122, 2019014, 'No entrego reporte 4', '', '2022-09-23');
+(2, 3, 122, 2019014, 'No entrego reporte 4', '', '2022-09-23'),
+(3, 3, 102, 2019141, 'Entregaron tarea copiada', 'No aplica', '2022-09-23'),
+(4, 3, 102, 2019165, 'Entregaron tarea copiada', '', '2022-09-23'),
+(5, 3, 113, 2019014, 'No entrego tarea 8', '', '2022-09-23'),
+(6, 1, 103, 2022154, 'estuvo molestando a sus compañeros en clase y no trabajo.', '', '2022-09-23');
 
 --
 -- Disparadores `reportediario`
@@ -473,13 +482,13 @@ ALTER TABLE `nivel`
 -- AUTO_INCREMENT de la tabla `record`
 --
 ALTER TABLE `record`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 
 --
 -- AUTO_INCREMENT de la tabla `reportediario`
 --
 ALTER TABLE `reportediario`
-  MODIFY `correlativo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `correlativo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`

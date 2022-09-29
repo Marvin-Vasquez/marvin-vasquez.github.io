@@ -31,11 +31,33 @@
       }
       public function getReportes(){
         $arrData = $this->model->selectReportes();
-        //dep($arrData);
-        //exit;
+        for($i=0; $i<count($arrData);$i++){
+          $arrData[$i]['options']='<div class="text-center">  
+                  <button type="button" class="btn btn-secundary btn-sm btnViewReportes" style="background-color: #85929E;" title="Ver reportes" onclick="fntViewReportes('.$arrData[$i]['carnet'].');"><i class="fa-sharp fa-solid fa-eye"></i></button>
+                  <button type="button" class="btn btn-primary btn-sm btnNotificarReportes" title="Notificar reportes" onclick="fntNotificarReportes('.$arrData[$i]['carnet'].');"><i class="fa-solid fa-paper-plane"></i></button>
+                  
+                </div>'; 
+        }
         echo json_encode($arrData, JSON_UNESCAPED_UNICODE);
   
         die();
+      }
+      public function getDatosReportes(int $idEstudiante){
+        $id = intval($idEstudiante);
+        
+        $arrData = $this->model->selectDatosReportes($id);
+        if(empty($arrData))
+        {
+            $arrResponse = array('status' => false, 'msg' => 'Datos no encontrados.');
+
+        }else{
+            $arrResponse = array('status'=> true, 'data' => $arrData);
+        }
+        //dep($arrData); 
+        echo json_encode($arrData,JSON_UNESCAPED_UNICODE);
+
+        die();
+
       }
 
       public function reportes_diarios(){
@@ -46,7 +68,20 @@
         $this->views->getView($this,"reportes_diarios",$data);
       }
      
-   
+      public function enviarCorreo(int $carnet){
+        //echo $carnet;
+        $arrData = $this->model->getReportesEstudiantes($carnet);
+        $mail =getFileReporte("Template/Email/enviar_reporte",$arrData);
+
+        //dep($arrData);
+        //echo json_encode($carnet,JSON_UNESCAPED_UNICODE);
+
+        $data['page_tag']="Notificación de reportes";
+        $data['page_title']="Notificación de reportes";
+        $data['page_name']="notificar";
+        $data['page_functions_js']="functions_notificar.js";
+        $this->views->getView($this,"notificar",$data);
+      }
     }
 
 ?>

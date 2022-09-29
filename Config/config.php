@@ -18,6 +18,9 @@
 	const NOMBRE_REMITENTE = "Control de reportes ITC";
 	const EMAIL_REMITENTE = "no-reply@itc.edu.gt";
 	const NOMBRE_EMPRESA = "Instituto Tecnológico de Computación";
+    const DIRECCION_EMPRESA = "2da Calle 11-65 Zona 1, Guatemala";
+    const TELEFONO_EMPRESA = "+502 2253-8385 / 2251-4671";
+    const EMAIL_EMPRESA = "tecnologico@itc.edu.gt";
 	const WEB_EMPRESA = "www.itc.edu.gt";
 
 ?>
